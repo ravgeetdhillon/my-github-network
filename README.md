@@ -10,7 +10,7 @@ All you need is a Github username. Your github username is https://github.com/{u
 
 The github network app implemented here can generate a network of `Level 1` consisting of followers of followers of a user, followers of user and user itself in an orange node. This is done for the performance issues. To generate a larger network graph, fork the project and change the value of `$level` variable in `github.php` to any other value than `1`.
 
-Remember that the time taken for generating the network increases exponentially for each increment to the value of  `$level` variable.
+**Remember** that the time taken for generating the network increases exponentially for each increment to the value of  `$level` variable.
 
 
 ### Credits
