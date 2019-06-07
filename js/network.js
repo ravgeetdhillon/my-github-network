@@ -73,7 +73,6 @@ function generateNetwork(data, username) {
     for (i = 0; i < l; i++){
         if (circles[i].innerHTML == `<title>${username}</title>`) {
             circles[i].setAttribute("style", "fill:#f57900;r:5;");
-            console.log(circles[i].innerHTML);
         }
     }
 }
