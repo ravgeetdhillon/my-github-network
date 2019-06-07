@@ -108,7 +108,6 @@ function getResult(username) {
             }
         }
     };
-    ajax.setRequestHeader("Access-Control-Allow-Origin", "*");
     ajax.open("GET", url);
     ajax.send();
 }
