@@ -1,0 +1,12 @@
+body {
+    min-height: 100vh;
+}
+circle {
+    cursor: pointer;
+    r: 5;
+    fill: #212121;
+    transition: r 0.15s ease-in-out;
+}
+circle:hover {
+    r: 8;
+}

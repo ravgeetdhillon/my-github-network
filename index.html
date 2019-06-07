@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Github Network</title>
+    <link rel="stylesheet" href="css/theme.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" media="screen" type="text/css" />
+    <script src="js/d3.v5.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-between" id="col">
+                <div>
+                    <h1 class="display-4">Github Network</h1>
+                    <p class="text-muted">Find out the coders linked to you on Github.</p>
+                    <br>
+                    <div class="form-group d-flex mb-2">
+                        <input type="text" class="form-control form-control-sm mr-2 w-50" name="username" placeholder="Your Github Username" />
+                        <button class="btn btn-primary btn-sm" id="submit" onclick="getResult(document.getElementsByName('username')[0].value)">Generate</button>
+                    </div>
+                    <p class="small" id="statusBlock"></p>
+                </div>
+                
+            </div>
+            <div class="col">
+                <svg class="bg-info"></svg>
+                <div class="d-flex flex-column border-top mt-2 pt-1 text-muted">
+                    <span class="small">Coded by <a href="https://github.com/ravgeetdhillon/" class="text-secondary">Ravgeet Dhillon</a> with <a href="https://d3js.org">D3.js</a> and <a href="https://developer.github.com/v3">Github API.</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/network.js"></script>
+
+</html>

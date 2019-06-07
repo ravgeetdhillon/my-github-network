@@ -1,0 +1,14 @@
+{
+  "name": "github-network",
+  "version": "1.0.0",
+  "description": "Find out the coders linked to you on Github.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravgeet Dhillon",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
