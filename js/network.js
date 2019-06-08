@@ -53,6 +53,7 @@ function generateNetwork(data, username) {
         .selectAll("circle")
         .data(nodes)
         .join("circle")
+        .attr("onclick", "location.assign('https://github.com/" + `${d => d.id}` + "')")
         .call(drag(simulation));
     node.append("title")
         .text(d => d.id);
@@ -74,6 +75,8 @@ function generateNetwork(data, username) {
         if (circles[i].innerHTML == `<title>${username}</title>`) {
             circles[i].setAttribute("style", "fill:#f57900;r:5;");
         }
+        var title = circles[i].getElementsByTagName("title")[0].innerHTML;
+        circles[i].setAttribute("onclick", `location.assign('https://github.com/${title}')`);
     }
 }
 
