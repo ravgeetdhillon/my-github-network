@@ -69,9 +69,9 @@ function generateNetwork(data, username) {
     });
     svg.node();
 
-    var circles = document.getElementsByTagName('circle');
+    var circles = document.getElementsByTagName("circle");
     var i, l = circles.length;
-    for (i = 0; i < l; i++){
+    for (i = 0; i < l; i++) {
         if (circles[i].innerHTML == `<title>${username}</title>`) {
             circles[i].setAttribute("style", "fill:#f57900;r:5;");
         }
@@ -106,6 +106,16 @@ function getResult(username) {
                     var svgMain = document.getElementsByTagName("svg")[0];
                     svgMain.innerHTML = "";
                     generateNetwork(data, username);
+                    
+                    var circles = document.getElementsByTagName("circle");
+                    var i, l = circles.length;
+                    for (i = 0; i < l; i++) {
+                        if (circles[i].innerHTML == `<title>${username}</title>`) {
+                            circles[i].setAttribute("style", "fill:#f57900;r:5;");
+                        }
+                        var title = circles[i].getElementsByTagName("title")[0].innerHTML;
+                        circles[i].setAttribute("onclick", `location.assign('https://github.com/${title}')`);
+                    }
                     break;
             }
         }
