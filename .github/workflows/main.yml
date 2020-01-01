@@ -1,0 +1,13 @@
+name: Prevent sleep
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Curl Request
+      run: |
+        curl -s https://my-github-network.herokuapp.com/ > /dev/null
